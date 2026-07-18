@@ -38,6 +38,22 @@ class PassTomb < Formula
       nushell (~/.config/nushell/env.nu):
         $env.PASSWORD_STORE_ENABLE_EXTENSIONS = "true"
         $env.PASSWORD_STORE_EXTENSIONS_DIR = "#{opt_share}/pass-extensions"
+
+      elvish (~/.elvish/rc.elv):
+        set-env PASSWORD_STORE_ENABLE_EXTENSIONS true
+        set-env PASSWORD_STORE_EXTENSIONS_DIR #{opt_share}/pass-extensions
+
+      xonsh (~/.xonshrc):
+        $PASSWORD_STORE_ENABLE_EXTENSIONS = "true"
+        $PASSWORD_STORE_EXTENSIONS_DIR = "#{opt_share}/pass-extensions"
+
+      tcsh (~/.tcshrc):
+        setenv PASSWORD_STORE_ENABLE_EXTENSIONS true
+        setenv PASSWORD_STORE_EXTENSIONS_DIR #{opt_share}/pass-extensions
+
+      oil (~/.oilrc):
+        export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+        export PASSWORD_STORE_EXTENSIONS_DIR="#{opt_share}/pass-extensions"
     EOS
   end
 end
