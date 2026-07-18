@@ -1,5 +1,5 @@
 class PassTomb < Formula
-  desc "pass extension: keep passwords encrypted inside a tomb (macOS DMG)"
+  desc "The pass-tomb extension for macos"
   homepage "https://github.com/Yahddyyp/pass-tomb-osx"
   url "https://github.com/Yahddyyp/pass-tomb-osx.git",
       tag: "v1.0.0"
@@ -29,13 +29,6 @@ class PassTomb < Formula
 
         export PASSWORD_STORE_ENABLE_EXTENSIONS=true
         export PASSWORD_STORE_EXTENSIONS_DIR="#{opt_share}/pass-extensions"
-
-      Then create your first tomb:
-
-        pass tomb <gpg-id>
-        pass open
-        pass close
-        pass timer 30m
     EOS
   end
 end
