@@ -36,8 +36,6 @@ class PassTomb < Formula
         pass open
         pass close
         pass timer 30m
-
-      Made by Yahddyyp
     EOS
   end
 end
