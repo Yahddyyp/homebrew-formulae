@@ -25,10 +25,19 @@ class PassTomb < Formula
 
   def caveats
     <<~EOS
-      Add these to your shell config (~/.zshrc):
+      Add to your shell config:
 
+      bash/zsh (~/.bashrc or ~/.zshrc):
         export PASSWORD_STORE_ENABLE_EXTENSIONS=true
         export PASSWORD_STORE_EXTENSIONS_DIR="#{opt_share}/pass-extensions"
+
+      fish (~/.config/fish/config.fish):
+        set -x PASSWORD_STORE_ENABLE_EXTENSIONS true
+        set -x PASSWORD_STORE_EXTENSIONS_DIR "#{opt_share}/pass-extensions"
+
+      nushell (~/.config/nushell/env.nu):
+        $env.PASSWORD_STORE_ENABLE_EXTENSIONS = "true"
+        $env.PASSWORD_STORE_EXTENSIONS_DIR = "#{opt_share}/pass-extensions"
     EOS
   end
 end
