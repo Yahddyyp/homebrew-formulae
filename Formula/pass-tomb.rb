@@ -25,7 +25,7 @@ class PassTomb < Formula
 
   def caveats
     <<~EOS
-      Add these to your shell config (~/.zshrc or ~/.bashrc):
+      Add these to your shell config (~/.zshrc):
 
         export PASSWORD_STORE_ENABLE_EXTENSIONS=true
         export PASSWORD_STORE_EXTENSIONS_DIR="#{opt_share}/pass-extensions"
