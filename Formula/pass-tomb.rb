@@ -1,5 +1,5 @@
 class PassTomb < Formula
-  desc "pass extension: keep passwords encrypted inside a tomb (macOS DMG)"
+  desc "The macOS of pass-tomb extension for pass"
   homepage "https://github.com/Yahddyyp/pass-tomb-osx"
   url "https://github.com/Yahddyyp/pass-tomb-osx.git",
       tag:      "v1.0.0",
