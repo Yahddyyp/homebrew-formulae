@@ -1,10 +1,9 @@
 class PassTomb < Formula
-  desc "The macOS of pass-tomb extension for pass"
+  desc "pass extension: keep passwords encrypted inside a tomb (macOS DMG)"
   homepage "https://github.com/Yahddyyp/pass-tomb-osx"
   url "https://github.com/Yahddyyp/pass-tomb-osx.git",
-      tag:      "v1.0.0",
-      revision: "HEAD"
-  license "GPL-3.0-or-later"
+      tag: "v1.0.0"
+  license "MIT"
   head "https://github.com/Yahddyyp/pass-tomb-osx.git", branch: "main"
 
   depends_on "rust" => :build
@@ -14,7 +13,6 @@ class PassTomb < Formula
   def install
     system "cargo", "install", *std_cargo_args
 
-    # Create wrapper scripts so `pass open/close/timer/tomb` work natively
     (share/"pass-extensions").mkpath
     %w[tomb open close timer].each do |cmd|
       (share/"pass-extensions/#{cmd}.bash").write <<~EOS
